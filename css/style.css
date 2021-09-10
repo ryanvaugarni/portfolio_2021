@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap');
+/* reset css */
+html{
+font-size: 62.5%;
+scroll-behavior: smooth;
+background: #fff url(https://img.freepik.com/vecteurs-libre/fond-abstrait-blanc_23-2148806276.jpg?size=626&ext=jpg)no-repeat fixed center center / cover;
+}
+body{
+    font: 1.6rem 'Montserrat', sans-serif;
+    margin: 0;
+    
+}
+h1,h2,h3,h4,h5,h6,p,figure,ul,ol{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a{
+    color: #222;
+    text-decoration: none;
+}
+*{
+    box-sizing: border-box;
+}
+:root{
+    --color-default: #000;
+    --color-primary: #2b7dc0;
+    --color-warning: #e23131;
+    --color-success: #4db32e;
+    --color-border: #b3b5b6;
+}
+/* thème */
+header img{
+    position: absolute;
+    top: 4rem;
+    left: 5rem;
+    z-index: 2;
+    width: 7rem;
+    height: 7rem;
+    clip-path: circle(50%);
+    display: block;
+}
+header{
+    line-height: 5.5rem;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    background: #e5e5e5;
+    font-weight: 100;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+h2, h3, ul, li{
+    text-align: center;
+    padding: 1rem;
+}
+p{
+    padding: 1rem;
+    padding-left: 0%;
+}
+article{
+    max-width: 90rem;
+    padding: 2rem;
+    border: solid 0.1rem transparent;
+    background-color: #fafafa;
+    margin: 0 auto 2rem;
+    box-shadow: 0 0 1.0rem var(--color-border);
+    margin-top: 2rem;
+    border-radius: 3rem;
+}
+article:first-child{
+    margin-top: 17rem;
+}
+h3{
+    background-color: #dd574e;
+    color: #fff;
+    border-radius: 2rem;
+    
+}
+/* pied de page */
+footer{
+    background-color: #e5e5e5;
+    padding: 3rem;
+}
+footer p{
+    color: rgb(3, 2, 2);
+    text-align: center;
+}
