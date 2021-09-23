@@ -9,7 +9,6 @@ background: #fff url(https://img.freepik.com/vecteurs-libre/fond-abstrait-blanc_
 body{
     font: 1.6rem 'Inconsolata', sans-serif;
     margin: 0;
-    
 }
 h1,h2,h3,h4,h5,h6,p,figure,ul,ol{
     margin: 0;
@@ -25,19 +24,31 @@ a{
 }
 :root{
     --color-default: #000;
-    --color-primary: #2b7dc0;
+    --color-primary: #5a9cd1d7;
     --color-warning: #e23131;
     --color-success: #4db32e;
     --color-border: #b3b5b6;
 }
+    *{
+        /* For FF and non-webkit browsers */
+        scrollbar-width: thin;
+        scrollbar-color: #000 #FFF;
+    }
+    *::-webkit-scrollbar {
+        width: .2rem;
+    }
+    *::-webkit-scrollbar-thumb {
+        background-color: #222;
+        outline: .1rem solid #333;
+    }
 /* thème */
 header img{
     position: absolute;
     top: 2rem;
     left: 15rem;
     z-index: 2;
-    width: 8rem;
-    height: 8rem;
+    width: 6rem;
+    height: 6rem;
     clip-path: circle(50%);
     display: block;
     -moz-transition-duration:1s;
@@ -63,11 +74,42 @@ header{
     width: 100%;
     top: 0;
 }
+/* menu */
+nav ul{
+    max-width: 80rem;
+    margin: 0 auto 2rem;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 4.5rem;
+    text-align: center;
+    width: calc(100% / 5);
+}
+nav ul li a{
+    display: block;
+    width: 100%;
+    transition: all 500ms ease-in-out;
+    border-radius: 1rem;
+}
+nav ul li:hover a{
+    background-color: var(--color-primary);
+    color: #fff;
+}
+.history{
+    transition: all 500ms ease-in-out;
+}
+.history:target{
+    background-color: #ccc;
+    color: #222;
+}
 h1{
     font: 4rem'Libre Baskerville', sans-serif;
 }
-h2, h3, ul, li{
+h2, h3, ul{
     text-align: center;
+    padding: 1rem;
+}
+main article ul li{
     padding: 1rem;
 }
 p{
@@ -88,30 +130,35 @@ article{
 article:first-child{
     margin-top: 5rem;
 }
+article h3{
+    top: 0;
+    position: sticky;
+}
+header h1 span{
+    vertical-align: middle;
+}
 h3{
     background-color: #6393c0;
     color: #fff;
     border-radius: 1rem;
-    
 }
 #gallery{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin: 0 auto;
     min-width: 30rem;
-    
 }
 /* pied de page */
 footer{
     background-color: #8ebce15e;
     padding: 1rem;
     margin-top: 4rem;
-    
 }
 footer p{
     color: rgb(3, 2, 2);
     text-align: left;
 }
+/* Responsive */
 @media screen and (max-width: 47rem){
     header{
         padding: 10rem;
